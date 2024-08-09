@@ -1,5 +1,6 @@
 <div class="container col-6">
   <h1><%= @list.name %></h1>
+  <%= cl_image_tag @list.photo.key if @list.photo.attached? %>
     <ul>
         <% @list.bookmarks.each do |bookmark| %>
           <li class="card list-group-item">
